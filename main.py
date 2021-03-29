@@ -32,4 +32,4 @@ print(fila_teste_2.chama_cliente(20))
 fila_teste_2.atualiza_fila()
 fila_teste_2.atualiza_fila()
 
-print(fila_teste_2.estatisticas('29/03/2021', 126995, 'detail'))
+print(fila_teste_2.estatisticas('29/03/2021', '126995', 'detail'))
