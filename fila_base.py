@@ -1,8 +1,14 @@
 import abc
 
+from typing import Union
+
+from estatistica_resumida import EstatisticaResumida
+from estatistica_detalhada import EstatisticaDetalhada
 from constantes import (
     TAMANHO_PADRAO_MAXIMO, TAMANHO_PADRAO_MINIMO, INCREMENTO_CODIGO_FILA
 )
+
+classes = Union[EstatisticaResumida, EstatisticaDetalhada]
 
 
 class FilaBase(metaclass=abc.ABCMeta):
@@ -34,5 +40,5 @@ class FilaBase(metaclass=abc.ABCMeta):
         ...
 
     @abc.abstractmethod
-    def estatisticas(self, dia: str, agencia: int, return_estatistica) -> dict:
+    def estatisticas(self, return_estatistica: classes) -> dict:
         ...

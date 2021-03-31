@@ -16,5 +16,5 @@ print(fila.chama_cliente(10))
 print(fila.chama_cliente(20))
 print(fila.chama_cliente(20))
 
-print(fila.estatisticas('29/03/2021', 204, EstatisticaResumida))
-print(fila.estatisticas('29/03/2021', 204, EstatisticaDetalhada))
+print(fila.estatisticas(EstatisticaResumida('29/03/2021', 204)))
+print(fila.estatisticas(EstatisticaDetalhada('29/03/2021', 204)))
