@@ -32,3 +32,7 @@ class FilaBase(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def chama_cliente(self, caixa: int):
         ...
+
+    @abc.abstractmethod
+    def estatisticas(self, dia: str, agencia: int, return_estatistica) -> dict:
+        ...

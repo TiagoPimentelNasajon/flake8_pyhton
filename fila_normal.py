@@ -10,3 +10,7 @@ class FilaNormal(FilaBase):
         cliente_atual: str = self.fila.pop(0)
         self.clientes_atendidos.append(cliente_atual)
         return('Cliente atual : {} --> Caixa {}'.format(cliente_atual, caixa))
+
+    def estatisticas(self, dia: str, agencia: int, return_estatistica) -> dict:
+        dados = return_estatistica(dia, agencia)
+        return dados.roda_estatistica(self.clientes_atendidos)
