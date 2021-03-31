@@ -1,35 +1,25 @@
-from fila_normal import FilaNormal
-from fila_prioritaria import FilaPrioritaria
-
-fila_teste = FilaNormal()
-
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
-#
-# print(fila_teste.chama_cliente(10))
-# print(fila_teste.chama_cliente(20))
-#
-# fila_teste.atualiza_fila()
-# fila_teste.atualiza_fila()
+# from constantes import TP_FILA_NORMAL, TP_FILA_PRIORITARIA
+from fabrica_fila import FabricaFila
 
 
-fila_teste_2 = FilaPrioritaria()
+fila = FabricaFila.pega_fila(1)
 
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
+fila.atualiza_fila()
 
-print(fila_teste_2.chama_cliente(10))
-print(fila_teste_2.chama_cliente(20))
+print(fila.chama_cliente(10))
+print(fila.chama_cliente(20))
+print(fila.chama_cliente(20))
+print(fila.chama_cliente(10))
+print(fila.chama_cliente(20))
 
-fila_teste_2.atualiza_fila()
-fila_teste_2.atualiza_fila()
-
-print(fila_teste_2.estatisticas('29/03/2021', '126995', 'detail'))
+# print(fila_teste_2.estatisticas('29/03/2021', '126995', 'detail'))

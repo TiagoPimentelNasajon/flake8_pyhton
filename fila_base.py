@@ -1,5 +1,9 @@
 import abc
 
+from constantes import (
+    TAMANHO_PADRAO_MAXIMO, TAMANHO_PADRAO_MINIMO, INCREMENTO_CODIGO_FILA
+)
+
 
 class FilaBase(metaclass=abc.ABCMeta):
     codigo: int = 0
@@ -8,22 +12,22 @@ class FilaBase(metaclass=abc.ABCMeta):
     senha_atual: str = ''
 
     def reseta_fila(self) -> None:
-        if self.codigo >= 100:
-            self.codigo = 0
+        if self.codigo >= TAMANHO_PADRAO_MAXIMO:
+            self.codigo = TAMANHO_PADRAO_MINIMO
         else:
-            self.codigo += 1
+            self.codigo += INCREMENTO_CODIGO_FILA
 
     def inseri_cliente(self):
         self.fila.append(self.senha_atual)
-
-    @abc.abstractmethod
-    def gera_senha_atual(self):
-        ...
 
     def atualiza_fila(self) -> None:
         self.reseta_fila()
         self.gera_senha_atual()
         self.inseri_cliente()
+
+    @abc.abstractmethod
+    def gera_senha_atual(self):
+        ...
 
     @abc.abstractmethod
     def chama_cliente(self, caixa: int):
